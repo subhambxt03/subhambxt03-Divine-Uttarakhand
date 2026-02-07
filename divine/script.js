@@ -40,7 +40,7 @@ const templeCategories = {
     ]
 };
 
-// District Temples (6 temples each)
+// District Temples 
 const districtTemples = {
     "Almora": [
         { id: 25, name: "Kasar Devi Temple", description: "Ancient temple with cosmic energy center.", longDescription: "Kasar Devi Temple gained international fame when spiritual seekers including Swami Vivekananda visited here. The area is known for its high cosmic energy.", location: "Almora", lat: 29.6214, lng: 79.6462 },
@@ -163,7 +163,6 @@ const homeTemples = [
 const categories = ["Char Dham", "Panch Kedar", "Panch Badri", "Panch Prayag", "Panch Kailash"];
 const districts = Object.keys(districtTemples);
 
-// ADD THESE HELPER FUNCTIONS AT THE END
 const templeImageMap = {
     "badrinathtemple": "badrinath",
     "kedarnathtemple": "kedarnath",

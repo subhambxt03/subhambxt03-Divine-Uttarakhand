@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -114,7 +113,7 @@ body {
     cursor: pointer;
 }
 
-/* District Buttons - PLAIN BLACK BACKGROUND */
+/* District Buttons */
 .district-buttons {
     background: #111111;
     padding: 20px 15px;
@@ -167,7 +166,7 @@ body {
     background: #8B4513;
 }
 
-/* Header Buttons - WITH SIDE IMAGES */
+/* Header Buttons */
 .header-buttons {
     background: white;
     padding: 20px 15px;
@@ -176,69 +175,60 @@ body {
     overflow: hidden;
 }
 
-/* Left corner image - Clear and wide */
+/* Left corner image  */
 .header-buttons::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 800px; /* Increased width */
-    height: 200px; /* Increased height proportionally */
+    width: 800px;
+    height: 200px; 
     background: url('images/header-1.jpg') no-repeat left top;
     background-size: contain;
-    opacity: 1; /* Changed from 0.3 to 1 for full clarity */
+    opacity: 1; 
     z-index: 1;
-    /* Remove any blur/darkening effects */
     filter: none;
     backdrop-filter: none;
     background-blend-mode: normal;
-    /* Ensure no black overlay */
     background-color: transparent;
-    /* Remove any box-shadows or overlays */
     box-shadow: none;
-    /* Make sure image displays clearly */
     mix-blend-mode: normal;
 }
 
-/* Right corner image - Clear and wide */
+/* Right corner image  */
 .header-buttons::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 800px; /* Increased width */
-    height: 200px; /* Increased height proportionally */
+    width: 800px; 
+    height: 200px;
     background: url('images/header-2.jpg') no-repeat right top;
     background-size: contain;
-    opacity: 1; /* Changed from 0.3 to 1 for full clarity */
+    opacity: 1; 
     z-index: 1;
-    /* Remove any blur/darkening effects */
     filter: none;
     backdrop-filter: none;
     background-blend-mode: normal;
-    /* Ensure no black overlay */
     background-color: transparent;
-    /* Remove any box-shadows or overlays */
     box-shadow: none;
-    /* Make sure image displays clearly */
     mix-blend-mode: normal;
 }
 
-/* Add black background to parent but not on images */
+
 .header-buttons {
     position: relative;
-    background-color: #000; /* Black background */
+    background-color: #000;
     padding: 20px 0;
-    /* Make sure the pseudo-elements sit on top */
-    overflow: hidden; /* Contain the absolutely positioned images */
+    overflow: hidden; 
 }
 
-/* Container with higher z-index to stay above images */
+
 .header-buttons .container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    z-index: 3; /* Increased to ensure it's above images */
+    z-index: 3; 
 }
 
 .header-buttons h2 {
@@ -247,8 +237,8 @@ body {
     margin-bottom: 15px;
     font-size: 1.4rem;
     font-weight: 500;
-    position: relative; /* Ensure it's above the images */
-    z-index: 4; /* Higher than container */
+    position: relative; 
+    z-index: 4; 
 }
 .category-buttons {
     display: flex;
@@ -276,7 +266,7 @@ body {
 .category-btn.active {
     background: #8B4513;
 }
-/* Home Section with Background - CLEAR IMAGE, NO OVERLAY */
+/* Home Section with Background */
 .home-section {
     background: url('images/background.jpg');
     background-size: cover;
@@ -327,7 +317,7 @@ body {
     grid-auto-rows: 1fr;
 }
 
-/* Char Dham: 3 temples in first row, 1 temple centered in second row */
+
 .temple-grid.char-dham-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
@@ -344,12 +334,12 @@ body {
 .temple-grid.panch-prayag-grid,
 .temple-grid.panch-kailash-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns for finer control */
+    grid-template-columns: repeat(6, 1fr); 
     grid-template-rows: auto auto;
     gap: 20px;
 }
 
-/* First row items - each spans 2 columns */
+
 .temple-grid.panch-kedar-grid .temple-grid-item:nth-child(1),
 .temple-grid.panch-kedar-grid .temple-grid-item:nth-child(2),
 .temple-grid.panch-kedar-grid .temple-grid-item:nth-child(3),
@@ -386,12 +376,12 @@ body {
     grid-column: 5 / span 2;
 }
 
-/* Second row items - each spans 2 columns and positioned to create overlap */
+
 .temple-grid.panch-kedar-grid .temple-grid-item:nth-child(4),
 .temple-grid.panch-badri-grid .temple-grid-item:nth-child(4),
 .temple-grid.panch-prayag-grid .temple-grid-item:nth-child(4),
 .temple-grid.panch-kailash-grid .temple-grid-item:nth-child(4) {
-    grid-column: 2 / span 2; /* Starts at column 2, spans 2 columns */
+    grid-column: 2 / span 2;
     grid-row: 2;
 }
 
@@ -399,7 +389,7 @@ body {
 .temple-grid.panch-badri-grid .temple-grid-item:nth-child(5),
 .temple-grid.panch-prayag-grid .temple-grid-item:nth-child(5),
 .temple-grid.panch-kailash-grid .temple-grid-item:nth-child(5) {
-    grid-column: 4 / span 2; /* Starts at column 4, spans 2 columns */
+    grid-column: 4 / span 2; 
     grid-row: 2;
 }
 
@@ -409,7 +399,7 @@ body {
     grid-template-rows: auto auto;
 }
 
-/* Home temples grid (8 temples) */
+/* Home temples grid  */
 .temple-grid.home-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
@@ -424,7 +414,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* Temple Card - All cards same size */
+/* Temple Card */
 .temple-card {
     background: white;
     border-radius: 8px;
@@ -742,7 +732,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* About Section - CLEAR IMAGE, NO OVERLAY */
+/* About Section */
 .about-section {
     background: url('images/about.jpg');
     background-size: cover;
@@ -988,14 +978,14 @@ body {
     position: relative;
 }
 
-/* Glowing effect on hover */
+
 .social-icon:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     background: #8B4513;
 }
 
-/* Pulsing animation */
+
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.4);
@@ -1019,9 +1009,9 @@ body {
     border-top: 1px solid #333;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
-    /* Tablet view - 2 columns for all grids */
+
     .temple-grid.char-dham-grid,
     .temple-grid.panch-kedar-grid,
     .temple-grid.panch-badri-grid,
@@ -1032,8 +1022,8 @@ body {
     .search-results-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    /* Reset specific positioning on tablet */
+ 
+ 
     .temple-grid.char-dham-grid .temple-grid-item:nth-child(4),
     .temple-grid.panch-kedar-grid .temple-grid-item:nth-child(4),
     .temple-grid.panch-kedar-grid .temple-grid-item:nth-child(5),
@@ -1053,7 +1043,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* MOBILE NAVIGATION - Stacked layout */
+   
     .navbar {
         height: auto;
         padding: 10px 0;
@@ -1065,8 +1055,8 @@ body {
         padding: 0 15px;
         gap: 10px;
     }
+   
     
-    /* Divine Uttarakhand at top - centered and smaller */
     .navbar-logo {
         width: 100%;
         justify-content: center;
@@ -1075,14 +1065,14 @@ body {
     }
     
     .navbar-logo h1 {
-        font-size: 1.2rem; /* Smaller font for mobile */
+        font-size: 1.2rem; 
     }
     
     .navbar-logo img {
-        height: 30px; /* Smaller logo for mobile */
+        height: 30px; 
     }
+  
     
-    /* Search bar - full width below logo */
     .navbar-search {
         width: 100%;
         order: 2;
@@ -1093,8 +1083,8 @@ body {
         max-width: 500px;
         margin: 0 auto;
     }
+   
     
-    /* Navigation buttons - below search bar */
     .navbar-links {
         width: 100%;
         justify-content: center;
@@ -1112,11 +1102,11 @@ body {
     .mobile-menu-btn {
         display: none;
     }
+  
     
-    /* DISTRICT BUTTONS SECTION - FIXED, NO SCROLL */
     .district-buttons {
         position: sticky;
-        top: 130px; /* Adjusted for taller mobile nav */
+        top: 130px; 
         background: #111111;
         padding: 15px 10px;
         margin-top: 0;
@@ -1137,11 +1127,11 @@ body {
         padding: 0 5px;
         gap: 8px;
     }
+  
     
-    /* HEADER BUTTONS SECTION - FIXED, NO SCROLL */
     .header-buttons {
         position: sticky;
-        top: 200px; /* Adjusted for taller nav + district buttons */
+        top: 200px; 
         background-color: #000;
         padding: 15px 10px;
         z-index: 998;
@@ -1156,14 +1146,14 @@ body {
         padding-bottom: 10px;
         -webkit-overflow-scrolling: touch;
     }
+   
     
-    /* HOME SECTION - Horizontal scroll for temple cards */
     .home-section {
         padding: 20px 15px;
         min-height: auto;
     }
+  
     
-    /* Override grid layout with flex for horizontal scrolling */
     .temple-grid.home-grid {
         display: flex;
         flex-wrap: nowrap;
@@ -1181,8 +1171,8 @@ body {
         width: 300px;
         max-width: 85vw;
     }
+   
     
-    /* CHAR DHAM - Horizontal scroll for temple cards */
     .temple-grid.char-dham-grid {
         display: flex;
         flex-wrap: nowrap;
@@ -1201,7 +1191,7 @@ body {
         max-width: 85vw;
     }
     
-    /* EXPLORE BY DISTRICT - Horizontal scroll for temple cards */
+
     .temple-grid.district-grid {
         display: flex;
         flex-wrap: nowrap;
@@ -1219,8 +1209,7 @@ body {
         width: 300px;
         max-width: 85vw;
     }
-    
-    /* PANCH SECTIONS - Horizontal scroll for temple cards */
+
     .temple-grid.panch-kedar-grid,
     .temple-grid.panch-badri-grid,
     .temple-grid.panch-prayag-grid,
@@ -1244,8 +1233,8 @@ body {
         width: 300px;
         max-width: 85vw;
     }
+  
     
-    /* Ensure temple cards maintain same height in single row */
     .temple-card {
         height: 100%;
         display: flex;
@@ -1262,7 +1251,7 @@ body {
         margin-top: auto;
     }
     
-    /* Other adjustments */
+
     .about-features {
         grid-template-columns: 1fr;
     }
@@ -1270,22 +1259,22 @@ body {
     .contact-container {
         padding: 30px 20px;
     }
+   
     
-    /* Adjust padding for sections to account for taller sticky headers */
     .home-section,
     .about-section,
     .contact-section {
         padding-top: 160px;
     }
+  
     
-    /* Search results grid - vertical on mobile */
     .search-results-grid {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    /* Make temple cards slightly smaller on very small screens */
+ 
     .temple-grid.home-grid .temple-grid-item,
     .temple-grid.char-dham-grid .temple-grid-item,
     .temple-grid.district-grid .temple-grid-item,
@@ -1297,8 +1286,8 @@ body {
         width: 280px;
         max-width: 85vw;
     }
+  
     
-    /* Further adjust mobile navigation */
     .navbar-logo h1 {
         font-size: 1.1rem;
     }
@@ -1311,8 +1300,8 @@ body {
         padding: 5px 10px;
         font-size: 0.85rem;
     }
+  
     
-    /* Adjust sticky positions for smaller screens */
     .district-buttons {
         top: 120px;
     }
@@ -1357,8 +1346,8 @@ body {
         width: 45px;
         height: 45px;
     }
+   
     
-    /* Adjust padding for sections */
     .home-section,
     .about-section,
     .contact-section {

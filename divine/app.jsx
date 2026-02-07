@@ -358,7 +358,6 @@ function MapModal({ temple, isOpen, onClose }) {
 
 // Home Section Component
 function HomeSection({ temples, onDirectionClick, onAboutTempleClick, viewMode, activeCategory }) {
-    // Determine grid class based on view mode and category
     const getGridClass = () => {
         if (viewMode === 'search') {
             return 'search-results-grid';
